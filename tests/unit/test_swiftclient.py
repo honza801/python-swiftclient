@@ -2322,7 +2322,8 @@ class TestConnection(MockHttpTest):
 
         def local_http_connection(url, proxy=None, cacert=None,
                                   insecure=False, cert=None, cert_key=None,
-                                  ssl_compression=True, timeout=None):
+                                  ssl_compression=True, timeout=None,
+                                  kerberos=False):
             parsed = urlparse(url)
             return parsed, LocalConnection()
 

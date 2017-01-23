@@ -221,7 +221,8 @@ class MockHttpTest(unittest.TestCase):
 
             def wrapper(url, proxy=None, cacert=None, insecure=False,
                         cert=None, cert_key=None,
-                        ssl_compression=True, timeout=None):
+                        ssl_compression=True, timeout=None,
+                        kerberos=False):
                 if storage_url:
                     self.assertEqual(storage_url, url)
 
